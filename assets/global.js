@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
   },
   button: {
     alignItems: "center",
+    paddingVertical: 10,
   },
   buttonText: {
     textAlign: "center",
@@ -30,6 +31,9 @@ export const homeStyles = StyleSheet.create({
     paddingTop: 30,
     paddingHorizontal: 10,
     paddingVertical: 30,
+  },
+  profileContainer: {
+    backgroundColor: "#fff",
   },
   name: {
     color: "#f7f7f7",
