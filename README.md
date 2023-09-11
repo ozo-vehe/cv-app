@@ -1,6 +1,6 @@
 # CV APP
 - This mobile application is designed to serve as a comprehensive CV (Curriculum Vitae) that allows you to showcase your personal and professional details. It provides a user-friendly interface for both viewing and editing the information on your CV. 
-- Appetize.io link: [CV App](https://appetize.io/app/i6ndygyym7ax3yne34kv36j6oy)
+- Appetize.io link: [CV App](https://appetize.io/app/nhlmlopbr4isimn265br3ueu2a)
   
 ## Prerequisites
 - Knowledge of React
