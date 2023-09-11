@@ -50,7 +50,9 @@ function HomeScreen({ navigation, route }) {
           <View style={styles.button}>
             <Text
               style={[styles.buttonText, homeStyles.buttonText]}
-              onPress={() => navigation.navigate("Edit")}
+              onPress={() => {
+                navigation.navigate("Edit")
+              }}
             >
               Edit CV
             </Text>

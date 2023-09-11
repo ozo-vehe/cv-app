@@ -9,22 +9,15 @@ import {
 import { editStyles, styles } from "../assets/global";
 
 function EditScreen({ navigation }) {
-  const [saved, setSaved] = useState(false);
   const [name, setName] = useState("");
   const [slack, setSlack] = useState("");
   const [github, setGithub] = useState("");
   const [bio, setBio] = useState("");
-  const [profile, setProfile] = useState({});
   const [editName, setEditName] = useState(false);
   const [editSlack, setEditSlack] = useState(false);
   const [editGithub, setEditGithub] = useState(false);
   const [editBio, setEditBio] = useState(false);
 
-  const saveProfile = async () => {
-    const profile = { name, slack, github, bio };
-    setProfile(profile);
-    setSaved(true);
-  };
 
   return (
     <View style={editStyles.container}>
@@ -108,7 +101,8 @@ function EditScreen({ navigation }) {
               <Text
                 style={[styles.buttonText, editStyles.buttonText]}
                 onPress={() => {
-                  saveProfile();
+                  const profile = { name, slack, github, bio };
+                  navigation.navigate("Home", { profile });
                 }}
               >
                 Save
@@ -116,19 +110,6 @@ function EditScreen({ navigation }) {
             </View>
           </TouchableOpacity>
         </View>
-
-        {saved && (
-          <TouchableOpacity>
-            <View style={styles.button}>
-              <Text
-                style={[styles.buttonText, editStyles.buttonText]}
-                onPress={() => navigation.navigate("Home", { profile })}
-              >
-                Go to Home
-              </Text>
-            </View>
-          </TouchableOpacity>
-        )}
       </ScrollView>
     </View>
   );
